@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RHPTPS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/tokens.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/components.css') }}" rel="stylesheet">
+</head>
+<body>
+  <div class="shell">
+
+    <header class="topbar">
+      <a href="#/" class="brand">
+        <span class="brand__mark">R</span>
+        <span class="brand__name">RHPTPS</span>
+      </a>
+      <nav class="topbar__nav" id="topnav"></nav>
+      <div class="topbar__session" id="session-slot"></div>
+    </header>
+
+    <main id="view" class="view" aria-live="polite"></main>
+
+    <nav class="bottombar" id="bottomnav"></nav>
+
+  </div>
+
+  <div class="toast-stack" id="toast-stack" aria-live="assertive"></div>
+
+  <script src="{{ url_for('static', filename='js/vendor/chart.umd.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
